@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang=en>
+<meta charset=utf-8>
+<title>Command Line Generators</title>
+<meta name=viewport content='width=device-width, initial-scale=1'>
+<meta name=author content='Shrikant Sharat Kandula'>
+
+<link rel=stylesheet href=styles.css>
+
+<h1 class=title>The <code>tar</code> command line generator</h1>
+
+<main>
+	<h2>What do you want to do?</h2>
+	<form id=paramForm>
+		<p>Command:
+			<label><input type=radio name=command value=c checked><span>Create</span></label>
+			<label><input type=radio name=command value=x><span>Extract</span></label>
+			<label><input type=radio name=command value=t><span>List Contents</span></label>
+		</p>
+
+		<p><label><input type=checkbox name=verbose><span>Verbose Output</span></label></p>
+
+		<p><label>Archive file name: <input type=text name=archiveFileName></label></p>
+
+		<p>Compression format:
+			<label><input type=radio name=compressor value='' checked><span>No compression</span></label>
+			<label><input type=radio name=compressor value=a><span>Detect from file name</span></label>
+			<label><input type=radio name=compressor value=j><span>bz2</span></label>
+			<label><input type=radio name=compressor value=z><span>gz</span></label>
+		</p>
+	</form>
+
+	<h2>Command to run</h2>
+	<pre id=cliDisplay></pre>
+	<p class=button-bar>
+	<button onClick='copyAsOneLine(event)'>Copy as one line</button>
+	</p>
+
+	<h2>What should I be concerned with?</h2>
+	<ol id=errorsBox></ol>
+
+	<h2>What will this command achieve?</h2>
+	<ol id=explainBox></ol>
+</main>
+
+<footer>Created by <a href='https://sharats.me' target=_blank>Shrikant Sharat Kandula</a>. Run
+	<a href=tests.html>tests</a>.</footer>
+
+<script src=main.js></script>
+<script>window.onload = appMain</script>
