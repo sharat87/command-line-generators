@@ -1,8 +1,8 @@
 serve:
-	npx parcel serve index.html --out-dir dist-serve --no-autoinstall --port 5200 --hmr-port 5201 --open
+	npx parcel serve src/index.html --out-dir dist-serve --no-autoinstall --port 5200 --hmr-port 5201 --open
 
 build: node_modules/sentinel
-	npx parcel build index.html --out-dir dist-build --no-autoinstall --no-cache --no-source-maps
+	npx parcel build src/index.html --out-dir dist-build --no-autoinstall --no-cache --no-source-maps
 
 node_modules/sentinel: package.json yarn.lock
 	yarn install --frozen-lockfile
