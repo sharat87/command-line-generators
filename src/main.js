@@ -20,7 +20,7 @@ const ToolRenderer = {
 	view(vnode) {
 		const { tool } = vnode.attrs;
 		return [
-			m("aside", m(".content", m(AsideCom))),
+			m(AsideCom),
 			m("section", m(".content", [
 				m("h1.title", ["The ", m("code", tool), " command line generator"]),
 				m(Registry.get(tool)),
@@ -45,9 +45,9 @@ function AsideCom() {
 		for (const name of Registry.keys()) {
 			links.push(m(m.route.Link, { href: "/" + name }, name));
 		}
-		return [
+		return m("aside", [
 			m("h2", "CLI Gen"),
 			m(".tool-links", links),
-		];
+		]);
 	}
 }
