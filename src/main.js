@@ -26,14 +26,11 @@ const ToolRenderer = {
 				m(Registry.get(tool)),
 				m("footer", [
 					m("span", [
-						"A quality tool by ",
+						"Created and curated by ",
 						m("a", { href: "https://sharats.me", target: "_blank" }, "Shrikant Sharat Kandula"),
 						".",
 					]),
-					m("span", [
-						m("a", { href: "tests.html" }, "Run Tests"),
-						m("a", { href: "https://github.com/sharat87/command-line-generators", target: "_blank" }, "Source on GitHub"),
-					]),
+					m("a", { href: "https://github.com/sharat87/command-line-generators", target: "_blank" }, "Source on GitHub"),
 				]),
 			]),
 		];
