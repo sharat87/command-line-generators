@@ -89,7 +89,7 @@ function renderCli(choices) {
 			if (!choices.fps) {
 				notes.push("You may want to set FPS to a low value like 10 or 15 when converting to GIFs.");
 			}
-			vf.push("scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse");
+			vf.push("scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse");
 			parts.push("-vf", "'" + vf.join(",") + "'");
 			parts.push("-loop", 0);
 		}

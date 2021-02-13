@@ -21,7 +21,7 @@ const ToolRenderer = {
 		const { tool } = vnode.attrs;
 		return [
 			m("aside", m(".content", m(AsideCom))),
-			m("section", [
+			m("section", m(".content", [
 				m("h1.title", ["The ", m("code", tool), " command line generator"]),
 				m(Registry.get(tool)),
 				m("footer", [
@@ -32,7 +32,7 @@ const ToolRenderer = {
 					]),
 					m("a", { href: "https://github.com/sharat87/command-line-generators", target: "_blank" }, "Source on GitHub"),
 				]),
-			]),
+			])),
 		];
 	},
 };
