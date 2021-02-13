@@ -18,7 +18,6 @@ function Component() {
 	function view() {
 		const {errors, explain, cli} = renderCli(choices)
 		return [
-			m("h1.title", ["The ", m("code", "tar"), " command line generator"]),
 			m("h2", "What do you want to do?"),
 			m("form", [
 				m("p", [
